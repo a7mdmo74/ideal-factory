@@ -86,7 +86,7 @@ export function ContactSection() {
           {/* Left Content */}
           <div className="max-w-md">
             <div className="mb-8">
-              <span className="inline-flex rounded-lg bg-[#5EB8C5] px-6 py-2 text-sm font-medium text-white">
+              <span className="inline-flex rounded-[10px] bg-[#5EB8C5] px-6 py-2 text-sm font-medium text-white">
                 Get in touch
               </span>
             </div>

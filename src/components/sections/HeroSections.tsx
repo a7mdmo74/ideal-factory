@@ -4,7 +4,7 @@ import { ArrowRightCircle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { getTranslations } from 'next-intl/server'
 import { routing } from '@/i18n/routing'
-
+import FloatingChat from '@/components/custom/FloatingChat'
 async function HeroSection({ locale }: { locale: string }) {
   const resolvedLocale = locale ?? routing.defaultLocale
   const t = await getTranslations({ locale: resolvedLocale, namespace: 'Hero' })
@@ -44,6 +44,7 @@ async function HeroSection({ locale }: { locale: string }) {
           </Button>
         </div>
       </div>
+      <FloatingChat />
     </section>
   )
 }

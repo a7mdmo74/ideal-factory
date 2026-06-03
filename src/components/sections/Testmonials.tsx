@@ -7,7 +7,7 @@ import { ChevronLeft, ChevronRight, QuoteIcon } from 'lucide-react'
 
 import { TESTIMONIALS } from '@/lib/constants'
 
-const Testmonials = () => {
+const Testimonials = () => {
   const scrollRef = useRef<HTMLDivElement | null>(null)
 
   const handleScroll = (direction: 'prev' | 'next') => {
@@ -22,6 +22,7 @@ const Testmonials = () => {
 
   return (
     <section className="relative overflow-hidden bg-[#231F20] text-white px-6 py-20 sm:px-8 lg:px-16">
+      {/* Background Left Decoration */}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 0 }}
@@ -29,12 +30,11 @@ const Testmonials = () => {
         className="pointer-events-none absolute -left-8 top-1/2 z-0 hidden -translate-y-1/2 opacity-30 lg:block"
       >
         <Image
-          src="/images/testmonials1.png"
-          alt=""
+          src="/images/testimonials1.png"
+          alt="Testmonails"
           width={250}
           height={250}
-          className="object-contain w-auto h-auto"
-          style={{ width: 'auto', height: 'auto' }}
+          className="object-contain"
           aria-hidden="true"
         />
       </motion.div>
@@ -46,12 +46,11 @@ const Testmonials = () => {
         className="pointer-events-none absolute -right-8 top-1/2 z-0 hidden -translate-y-1/2 opacity-30 lg:block"
       >
         <Image
-          src="/images/testmonials2.png"
-          alt=""
+          src="/images/testimonials2.png"
+          alt="Testmonials"
           width={300}
           height={300}
-          className="object-contain w-auto h-auto"
-          style={{ width: 'auto', height: 'auto' }}
+          className="object-contain"
           aria-hidden="true"
         />
       </motion.div>
@@ -63,7 +62,7 @@ const Testmonials = () => {
               Testimonials
             </span>
             <h2 className="mt-5 text-3xl font-bold leading-tight sm:text-4xl text-white">
-              What They&apos;re Talking About Company ?
+              What They&apos;re Talking About Company?
             </h2>
             <p className="mt-4 max-w-md text-sm leading-relaxed text-white/65">
               Real villa owners across the UAE have trusted Ideal Factory for kitchens, closets,
@@ -73,23 +72,27 @@ const Testmonials = () => {
               <button
                 type="button"
                 onClick={() => handleScroll('prev')}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/15 transition hover:bg-white/10"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/60 transition hover:bg-white/10"
                 aria-label="Previous review"
               >
-                <ChevronLeft className="h-5 w-5 cursor-pointer" aria-hidden="true" />
+                <ChevronLeft className="h-5 w-5" aria-hidden="true" />
               </button>
               <button
                 type="button"
                 onClick={() => handleScroll('next')}
-                className="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white"
+                className="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white transition hover:bg-white/10"
                 aria-label="Next review"
               >
-                <ChevronRight className="h-5 w-5 cursor-pointer" aria-hidden="true" />
+                <ChevronRight className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
           </div>
+
           <div className="overflow-hidden pb-4" dir="ltr">
-            <div ref={scrollRef} className="flex gap-4 p-4 overflow-x-auto scrollbar-hide">
+            <div
+              ref={scrollRef}
+              className="flex gap-4 p-4 overflow-x-auto scrollbar-none [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+            >
               {TESTIMONIALS.map(testimonial => (
                 <div
                   key={testimonial.id}
@@ -105,12 +108,12 @@ const Testmonials = () => {
                       {testimonial.quote}
                     </p>
                     <div className="mt-10 flex items-center gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5 text-sm font-semibold text-primary">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/5">
                         <Image
                           src={testimonial.image}
                           alt={`${testimonial.name}'s avatar`}
-                          width={40}
-                          height={40}
+                          width={48}
+                          height={48}
                           className="rounded-full object-cover"
                         />
                       </div>
@@ -124,19 +127,10 @@ const Testmonials = () => {
               ))}
             </div>
           </div>
-          <style jsx>{`
-            .scrollbar-hide {
-              -ms-overflow-style: none;
-              scrollbar-width: none;
-            }
-            .scrollbar-hide::-webkit-scrollbar {
-              display: none;
-            }
-          `}</style>
         </div>
       </div>
     </section>
   )
 }
 
-export default Testmonials
+export default Testimonials
