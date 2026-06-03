@@ -2,7 +2,7 @@ import * as React from 'react'
 import type { ContactFormData } from '@/types'
 
 interface ConfirmationEmailProps {
-  data: Pick<ContactFormData, 'first_name' | 'last_name' | 'email'>
+  data: Pick<ContactFormData, 'full_name' | 'email'>
 }
 
 export function ConfirmationEmailTemplate({ data }: ConfirmationEmailProps) {

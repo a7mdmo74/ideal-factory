@@ -76,7 +76,7 @@ const Testmonials = () => {
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/15 transition hover:bg-white/10"
                 aria-label="Previous review"
               >
-                <ChevronLeft className="h-5 w-5" aria-hidden="true" />
+                <ChevronLeft className="h-5 w-5 cursor-pointer" aria-hidden="true" />
               </button>
               <button
                 type="button"
@@ -84,7 +84,7 @@ const Testmonials = () => {
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-white text-white"
                 aria-label="Next review"
               >
-                <ChevronRight className="h-5 w-5" aria-hidden="true" />
+                <ChevronRight className="h-5 w-5 cursor-pointer" aria-hidden="true" />
               </button>
             </div>
           </div>

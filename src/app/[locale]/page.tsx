@@ -1,3 +1,4 @@
+import { ContactSection } from '@/components/sections/ContactSection'
 import HeroSection from '@/components/sections/HeroSections'
 import SolutionsSection from '@/components/sections/SolutionSection'
 import Testmonials from '@/components/sections/Testmonials'
@@ -9,6 +10,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <HeroSection locale={locale} />
       <SolutionsSection />
       <Testmonials />
+      <ContactSection />
     </>
   )
 }

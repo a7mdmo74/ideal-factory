@@ -12,8 +12,7 @@ export async function submitContactForm(
 ): Promise<ActionResponse<ContactFormData>> {
   // ── 1. Extract ───────────────────────────────────────────
   const raw = {
-    first_name: formData.get('first_name'),
-    last_name: formData.get('last_name'),
+    full_name: formData.get('full_name'),
     email: formData.get('email'),
     phone: formData.get('phone') || undefined,
     message: formData.get('message'),
@@ -45,7 +44,7 @@ export async function submitContactForm(
       from: emailConfig.from,
       to: emailConfig.to,
       replyTo: data.email,
-      subject: `New Inquiry from ${data.first_name} ${data.last_name} — ${siteConfig.name}`,
+      subject: `New Inquiry from ${data.full_name} — ${siteConfig.name}`,
       react: ContactEmailTemplate({ data, submittedAt }),
     })
 

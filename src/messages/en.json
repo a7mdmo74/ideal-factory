@@ -168,7 +168,6 @@
     "formTitle": "We Love To Hear From You",
     "fields": {
       "firstName": "First Name",
-      "lastName": "Last Name",
       "phone": "Phone No (optional)",
       "email": "Email",
       "message": "Message",

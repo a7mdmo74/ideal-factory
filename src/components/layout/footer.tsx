@@ -13,7 +13,7 @@ export function Footer() {
         <div className="absolute inset-0 bg-[#000000A8]" />
 
         {/* Extra Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/80" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/10 via-black/30 to-black/80" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-10">

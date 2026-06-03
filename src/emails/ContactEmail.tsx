@@ -73,18 +73,14 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
                   marginTop: 0,
                 }}
               >
-                You have a new inquiry from{' '}
-                <strong>
-                  {data.first_name} {data.last_name}
-                </strong>
-                .
+                You have a new inquiry from <strong>{data.full_name}</strong>.
               </p>
 
               <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '24px 0' }} />
 
               <table width="100%" cellPadding={0} cellSpacing={0}>
                 <tbody>
-                  <Row label="Full Name" value={`${data.first_name} ${data.last_name}`} />
+                  <Row label="Full Name" value={`${data.full_name}`} />
                   <Row label="Email" value={data.email} isLink={`mailto:${data.email}`} />
                   <Row
                     label="Phone"

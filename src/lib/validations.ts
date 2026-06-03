@@ -1,12 +1,9 @@
 import { z } from 'zod'
-import type { ContactFormData } from '@/types'
 
-export const contactSchema: z.ZodType<ContactFormData> = z.object({
-  first_name: z.string().min(2).max(50),
+export const contactSchema = z.object({
+  full_name: z.string().min(2).max(50),
 
-  last_name: z.string().min(2).max(50),
-
-  email: z.string().max(100),
+  email: z.string().email().max(100),
 
   phone: z.string().max(20).optional().or(z.literal('')),
 

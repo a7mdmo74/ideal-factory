@@ -100,8 +100,7 @@ export interface Testimonial {
 }
 
 export interface ContactFormData {
-  first_name: string
-  last_name: string
+  full_name: string
   email: string
   phone?: string
   message: string
@@ -114,8 +113,7 @@ export type ContactFormState =
   | { status: 'error'; message: string; fieldErrors?: ContactFieldErrors }
 
 export interface ContactFieldErrors {
-  first_name?: string[]
-  last_name?: string[]
+  full_name?: string[]
   email?: string[]
   phone?: string[]
   message?: string[]
