@@ -2,9 +2,11 @@ import type { Metadata } from 'next'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { getTranslations } from 'next-intl/server'
 import { notFound } from 'next/navigation'
-import { routing, type Locale } from '@/i18n/routing'
+import { routing } from '@/i18n/routing'
 import { fontVariables } from '@/config/fonts'
 import { siteConfig } from '@/config/site'
+import { Header } from '@/components/layout/header'
+import { Footer } from '@/components/layout/footer'
 
 interface LocaleLayoutProps {
   children: React.ReactNode
@@ -52,11 +54,14 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const messages = (await import(`../../messages/${locale}.json`)).default
 
   const dir = locale === 'ar' ? 'rtl' : 'ltr'
+  const localeClass = `locale-${locale}`
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <div dir={dir} className={`${fontVariables} font-[--font-lexend] antialiased`}>
+      <div dir={dir} className={`${fontVariables} ${localeClass} antialiased`}>
+        <Header />
         {children}
+        <Footer />
       </div>
     </NextIntlClientProvider>
   )

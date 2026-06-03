@@ -21,14 +21,12 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
           padding: '20px',
         }}
       >
-        {/* Container */}
         <table
           width="100%"
           cellPadding={0}
           cellSpacing={0}
           style={{ maxWidth: '600px', margin: '0 auto' }}
         >
-          {/* Header */}
           <tr>
             <td
               style={{
@@ -60,7 +58,6 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
             </td>
           </tr>
 
-          {/* Body */}
           <tr>
             <td
               style={{
@@ -69,7 +66,6 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
                 borderRadius: '0 0 12px 12px',
               }}
             >
-              {/* Greeting */}
               <p
                 style={{
                   fontSize: '16px',
@@ -84,10 +80,8 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
                 .
               </p>
 
-              {/* Divider */}
               <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '24px 0' }} />
 
-              {/* Details Table */}
               <table width="100%" cellPadding={0} cellSpacing={0}>
                 <tbody>
                   <Row label="Full Name" value={`${data.first_name} ${data.last_name}`} />
@@ -101,10 +95,8 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
                 </tbody>
               </table>
 
-              {/* Divider */}
               <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '24px 0' }} />
 
-              {/* Message */}
               <p
                 style={{
                   fontSize: '13px',
@@ -132,7 +124,6 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
                 {data.message}
               </p>
 
-              {/* CTA */}
               <div style={{ textAlign: 'center', marginTop: '32px' }}>
                 <a
                   href={`mailto:${data.email}`}
@@ -151,10 +142,8 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
                 </a>
               </div>
 
-              {/* Divider */}
               <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '32px 0 24px' }} />
 
-              {/* Footer Note */}
               <p
                 style={{
                   fontSize: '12px',

@@ -1,0 +1,210 @@
+{
+  "Metadata": {
+    "home": {
+      "title": "Villa Interior Design & Manufacturing in the UAE | Ideal Factory",
+      "description": "Ideal Factory designs, manufactures, and installs kitchens, wardrobes, doors, and premium uPVC windows for UAE villas."
+    },
+    "about": {
+      "title": "About Us",
+      "description": "Learn about Ideal Factory, an Emirati-owned interior manufacturing company for modern villa living."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "Contact Ideal Factory to start your free 3D design for villa interiors in the UAE."
+    },
+    "projects": {
+      "title": "Our Projects",
+      "description": "Explore villa interior projects delivered across the UAE by Ideal Factory."
+    }
+  },
+  "Navigation": {
+    "service": "Our Service",
+    "projects": "Our Projects",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "cta": "Start Your Project",
+    "toggleMenu": "Toggle menu",
+    "services": {
+      "kitchens": "Kitchens",
+      "kitchensDesc": "Custom villa kitchens built for daily use",
+      "wardrobes": "Wardrobes & Closets",
+      "wardrobesDesc": "Walk-in and built-in wardrobe systems",
+      "doors": "Interior Doors",
+      "doorsDesc": "Precision-crafted premium interior doors",
+      "windows": "uPVC Window Systems",
+      "windowsDesc": "German Schüco profile window & door systems"
+    }
+  },
+  "Hero": {
+    "badge": "Emirati Factory · Abu Dhabi",
+    "titleLine1": "Design & Delivery of Your Villa Interiors",
+    "titleLine2": "Made Simple",
+    "description": "Kitchens, closets, doors, and premium uPVC windows designed, manufactured, and installed by one trusted Emirati factory.",
+    "ctaPrimary": "Get Your FREE 3D Design Now",
+    "ctaSecondary": "View Our Projects",
+    "stats": {
+      "villas": "Villas Completed",
+      "factory": "Integrated Factory",
+      "years": "Years of Experience"
+    },
+    "scroll": "Scroll"
+  },
+  "Solutions": {
+    "title": "Our Solutions",
+    "lead": "We provide all types of integrated",
+    "accent": "KITCHEN, CLOSET, DOOR Services",
+    "cta": "Explore Our Projects",
+    "learnMore": "Learn more about {title}",
+    "services": {
+      "kitchens": {
+        "title": "Kitchens",
+        "subtitle": "Designed for daily use, built for long-term performance"
+      },
+      "wardrobes": {
+        "title": "Wardrobes & Closets",
+        "subtitle": "Structured storage that stays organized over time"
+      },
+      "doors": {
+        "title": "Interior Doors",
+        "subtitle": "Precise finishes that hold up with everyday use"
+      },
+      "windows": {
+        "title": "Premium Window Systems",
+        "subtitle": "Sealed systems for better comfort and control"
+      }
+    }
+  },
+  "Problems": {
+    "title": "Why Villa Interior Projects Often Become Difficult?",
+    "description": "When interior systems are sourced from multiple suppliers, the process becomes fragmented, making it difficult to coordinate a consistent final result. The lack of commitment leads to:",
+    "items": {
+      "quality": "Quality Problems",
+      "delays": "Delays during execution",
+      "value": "Poor value for money",
+      "afterSales": "Weak after-sales support"
+    },
+    "approach": {
+      "title1": "The Ideal Factory",
+      "title2": "Approach",
+      "multipleSystems": {
+        "title": "Multiple Interior Systems",
+        "body": "One Factory. Kitchens, wardrobes, doors, and premium window systems manufactured together in one facility for coordinated villa interiors."
+      },
+      "coordinatedDesign": {
+        "title": "Coordinated Design",
+        "body": "Our designers ensure that kitchens, closets, doors, and window systems complement each other in style and proportion."
+      },
+      "afterSales": {
+        "title": "After-Sales Support & Maintenance",
+        "body": "Our team installs every product with precision to ensure the final result reflects the original design."
+      },
+      "precision": {
+        "title": "Precision Manufacturing & Installation",
+        "body": "Manufactured in-house. Installed with precision. One accountable team."
+      }
+    }
+  },
+  "Design": {
+    "title1": "Design Your Villa Interiors",
+    "title2": "Before Spending a Dirham",
+    "description": "Upload your villa floor plan and collaborate live with our designers to create a full 3D interior concept within an hour.",
+    "benefits": {
+      "noGuessing": "No guessing",
+      "noRedesigns": "No Expensive Redesigns",
+      "noDelays": "No Delays"
+    },
+    "steps": {
+      "upload": "Upload Floor Plan",
+      "get3d": "Get 3D Design",
+      "liveEdit": "Live Design Edit"
+    },
+    "cta": "Start Your 3D Interior Design"
+  },
+  "Gallery": {
+    "badge": "Our Work",
+    "title": "Designed. Built. Delivered",
+    "cta": "Explore Projects",
+    "tags": {
+      "kitchen": "Kitchen",
+      "door": "Door",
+      "closet": "Closet",
+      "upvc": "uPVC Windows"
+    }
+  },
+  "WhyChoose": {
+    "title": "Why Villa Owners Choose Ideal Factory",
+    "points": {
+      "one": "One factory for kitchens, wardrobes, doors, and premium window systems.",
+      "two": "Fast 3D design before production",
+      "three": "Precision manufacturing with European machinery",
+      "four": "Solutions designed for UAE villas"
+    },
+    "cta": "Start Your Free 3D Design"
+  },
+  "Testimonials": {
+    "badge": "Testimonials",
+    "title": "What They're Talking About",
+    "description": "Real villa owners across the UAE have trusted Ideal Factory for kitchens, closets, doors and uPVC window systems.",
+    "customerLabel": "Customer",
+    "items": {
+      "one": {
+        "name": "Khalid Al Mansoori",
+        "quote": "Working with Ideal Factory was the best decision for our villa. Every kitchen, closet and door felt like part of one coordinated whole."
+      },
+      "two": {
+        "name": "Aisha Al Nuaimi",
+        "quote": "Having one factory handle everything saved months of coordination and the finish quality is genuinely premium."
+      },
+      "three": {
+        "name": "Fatima Al Hammadi",
+        "quote": "The uPVC windows and matching interior doors transformed how the villa feels. Quiet, well sealed, beautifully aligned."
+      }
+    }
+  },
+  "Contact": {
+    "badge": "Get in touch",
+    "title": "Let's discuss your project!",
+    "description": "Contact us today and learn more about how our interior fit out and custom manufacturing services can bring your ideas to life.",
+    "formTitle": "We Love To Hear From You",
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "phone": "Phone No (optional)",
+      "email": "Email",
+      "message": "Message",
+      "messagePlaceholder": "Type your message here...."
+    },
+    "submit": "Submit",
+    "submitting": "Submitting...",
+    "success": {
+      "title": "Thank you. We'll be in touch shortly.",
+      "body": "A designer from Ideal Factory will reach out to start your free 3D design."
+    },
+    "errors": {
+      "required": "Please fill in your name, email, and message.",
+      "invalidEmail": "Please enter a valid email address.",
+      "submitFailed": "We couldn't submit your message. Please call {phone} or try again."
+    }
+  },
+  "Footer": {
+    "description": "Kitchens, closets, doors, and premium uPVC windows designed, manufactured, and installed by one trusted Emirati factory.",
+    "quickLinks": "Quick Links",
+    "explore": "Explore",
+    "contact": "Contact",
+    "copyright": "Copyright ©2026 Ideal Factory. All rights reserved.",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy",
+    "links": {
+      "about": "About Us",
+      "team": "Our Team",
+      "testimonials": "Testimonials",
+      "projects": "Projects",
+      "gallery": "Gallery",
+      "walkInCloset": "Walk in Closet",
+      "wardrobeCloset": "Wardrobe Closet",
+      "uShapeKitchen": "U-Shape Kitchen",
+      "pantryKitchen": "Pantry Kitchen",
+      "doors": "Doors"
+    }
+  }
+}

@@ -18,30 +18,7 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: 'Our Service',
     href: '/service',
-    dropdown: [
-      {
-        label: 'Kitchens',
-        href: '/service/kitchens',
-        description: 'Custom villa kitchens built for daily use',
-      },
-      {
-        label: 'Wardrobes & Closets',
-        href: '/service/wardrobes',
-        description: 'Walk-in and built-in wardrobe systems',
-      },
-      {
-        label: 'Interior Doors',
-        href: '/service/interior-doors',
-        description: 'Precision-crafted premium interior doors',
-      },
-      {
-        label: 'uPVC Window Systems',
-        href: '/service/upvc-window-door-systems',
-        description: 'German Schüco profile window & door systems',
-      },
-    ],
   },
-  { label: 'Our Projects', href: '/projects' },
   { label: 'About Us', href: '/about' },
   { label: 'Contact Us', href: '/contact' },
 ]
@@ -57,7 +34,7 @@ export const SERVICES: Service[] = [
     slug: 'kitchens',
     href: '/service/kitchens',
     icon: 'ChefHat',
-    image: '/images/home/kitchen-product-image.webp',
+    image: 'https://i.pravatar.cc/600?img=1',
     description:
       'Modern kitchens engineered for durability, functionality, and refined everyday use.',
   },
@@ -67,7 +44,7 @@ export const SERVICES: Service[] = [
     slug: 'wardrobes',
     href: '/service/wardrobes',
     icon: 'Shirt',
-    image: '/images/home/wardrobe-product-image.webp',
+    image: 'https://i.pravatar.cc/600?img=2',
     description:
       'Walk-in and built-in wardrobe systems designed to organise storage while enhancing interior elegance.',
   },
@@ -77,7 +54,7 @@ export const SERVICES: Service[] = [
     slug: 'interior-doors',
     href: '/service/interior-doors',
     icon: 'DoorOpen',
-    image: '/images/home/door-product-image.webp',
+    image: 'https://i.pravatar.cc/600?img=3',
     description: 'Precision-crafted doors built for durability, security, and premium finishes.',
   },
   {
@@ -86,7 +63,7 @@ export const SERVICES: Service[] = [
     slug: 'upvc-window-door-systems',
     href: '/service/upvc-window-door-systems',
     icon: 'Maximize',
-    image: '/images/home/window-systems-image.webp',
+    image: 'https://i.pravatar.cc/600?img=4',
     description:
       'High-performance uPVC windows engineered for thermal insulation and long-term performance in UAE weather.',
   },
@@ -104,6 +81,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       'Working with Ideal Factory was the best decision for our villa. Every kitchen, closet and door felt like part of one coordinated whole.',
     rating: 5,
+    image: 'https://i.pravatar.cc/150?img=1',
   },
   {
     id: '2',
@@ -112,6 +90,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       'Having one factory handle everything saved months of coordination and the finish quality is genuinely premium.',
     rating: 5,
+    image: 'https://i.pravatar.cc/150?img=2',
   },
   {
     id: '3',
@@ -120,6 +99,7 @@ export const TESTIMONIALS: Testimonial[] = [
     quote:
       'The uPVC windows and matching interior doors transformed how the villa feels. Quiet, well sealed, beautifully aligned.',
     rating: 5,
+    image: 'https://i.pravatar.cc/150?img=3',
   },
 ]
 

@@ -1,10 +1,17 @@
-import { Lexend, Geist, Geist_Mono } from 'next/font/google'
+import { Lexend, Geist, Geist_Mono, Noto_Sans_Arabic } from 'next/font/google'
 
-export const lexend = Lexend({
+export const englishFont = Lexend({
   subsets: ['latin'],
-  variable: '--font-lexend',
+  variable: '--font-english',
   display: 'swap',
   weight: ['300', '400', '500', '600', '700'],
+})
+
+export const arabicFont = Noto_Sans_Arabic({
+  subsets: ['arabic'],
+  variable: '--font-arabic',
+  display: 'swap',
+  weight: ['400', '500', '600', '700'],
 })
 
 export const geist = Geist({
@@ -20,4 +27,9 @@ export const geistMono = Geist_Mono({
 })
 
 // Combined class string — use in layout.tsx
-export const fontVariables = [lexend.variable, geist.variable, geistMono.variable].join(' ')
+export const fontVariables = [
+  englishFont.variable,
+  arabicFont.variable,
+  geist.variable,
+  geistMono.variable,
+].join(' ')
