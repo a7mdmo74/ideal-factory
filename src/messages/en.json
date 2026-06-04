@@ -59,6 +59,11 @@
     "accent": "KITCHEN, CLOSET, DOOR Services",
     "cta": "Explore Our Projects",
     "learnMore": "Learn more about {title}",
+    "maskWords": {
+      "our": "OUR",
+      "interior": "INTERIOR",
+      "solutions": "SOLUTIONS"
+    },
     "services": {
       "kitchens": {
         "title": "Kitchens",

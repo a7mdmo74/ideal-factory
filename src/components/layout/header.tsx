@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { Menu, X, Phone, ChevronDown } from 'lucide-react'
 import { motion, useScroll, useTransform, AnimatePresence } from 'motion/react'
 import { useState, useRef, useEffect } from 'react'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { usePathname } from '@/i18n/navigation'
 import { Link } from '@/i18n/navigation'
 import { Button } from '@/components/ui/button'
@@ -13,10 +13,7 @@ import { cn } from '@/lib/utils'
 
 export const Header = () => {
   const t = useTranslations('Navigation')
-  const locale = useLocale()
   const pathname = usePathname()
-  const nextLocale = locale === 'en' ? 'ar' : 'en'
-  const languageLabel = locale === 'en' ? t('language.ar') : t('language.en')
   const [isOpen, setIsOpen] = useState(false)
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
   const dropdownRef = useRef<HTMLDivElement>(null)
@@ -151,15 +148,6 @@ export const Header = () => {
           <div className="flex items-center gap-3">
             <Button
               asChild
-              variant="ghost"
-              className="hidden h-11 rounded-[10px] border border-white/25 bg-white/5 px-4 font-semibold text-white hover:bg-white/10 hover:text-white sm:inline-flex"
-            >
-              <Link href={pathname} locale={nextLocale} aria-label={t('switchLanguage')}>
-                {languageLabel}
-              </Link>
-            </Button>
-            <Button
-              asChild
               className="hidden h-11 rounded-[10px] px-5 font-semibold sm:inline-flex"
             >
               <Link href="/contact">
@@ -249,20 +237,6 @@ export const Header = () => {
               </ul>
 
               <div className="px-4 pb-4 pt-2 sm:px-6">
-                <Button
-                  asChild
-                  variant="ghost"
-                  className="mb-3 w-full rounded-[10px] border border-white/20 bg-white/5 font-semibold text-white hover:bg-white/10 hover:text-white"
-                >
-                  <Link
-                    href={pathname}
-                    locale={nextLocale}
-                    onClick={() => setIsOpen(false)}
-                    aria-label={t('switchLanguage')}
-                  >
-                    {languageLabel}
-                  </Link>
-                </Button>
                 <Button asChild className="w-full rounded-[10px] font-semibold">
                   <Link href="/contact" onClick={() => setIsOpen(false)}>
                     <Phone className="mr-2 h-4 w-4" />
