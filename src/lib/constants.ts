@@ -1,31 +1,27 @@
 import type {
   NavItem,
   Testimonial,
-  WhyPoint,
   ProblemItem,
   ApproachItem,
-  ProcessStep,
   FooterSection,
   Service,
-  GalleryImage,
+  StepCard,
 } from '@/types'
-
-// ============================================================
-// NAVIGATION
-// ============================================================
 
 export const NAV_ITEMS: NavItem[] = [
   {
-    label: 'Our Service',
+    label: 'service',
     href: '/service',
+    dropdown: [
+      { label: 'services.kitchens', href: '/service/kitchens', description: 'services.kitchensDesc' },
+      { label: 'services.wardrobes', href: '/service/wardrobes', description: 'services.wardrobesDesc' },
+      { label: 'services.doors', href: '/service/interior-doors', description: 'services.doorsDesc' },
+      { label: 'services.windows', href: '/service/upvc-window-door-systems', description: 'services.windowsDesc' },
+    ],
   },
-  { label: 'About Us', href: '/about' },
-  { label: 'Contact Us', href: '/contact' },
+  { label: 'about', href: '/about' },
+  { label: 'contact', href: '/contact' },
 ]
-
-// ============================================================
-// SERVICES
-// ============================================================
 
 export const SERVICES: Service[] = [
   {
@@ -69,10 +65,6 @@ export const SERVICES: Service[] = [
   },
 ]
 
-// ============================================================
-// TESTIMONIALS
-// ============================================================
-
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: '1',
@@ -102,33 +94,6 @@ export const TESTIMONIALS: Testimonial[] = [
     image: 'https://i.pravatar.cc/150?img=3',
   },
 ]
-
-// ============================================================
-// WHY CHOOSE
-// ============================================================
-
-export const WHY_POINTS: WhyPoint[] = [
-  {
-    label: 'One factory for kitchens, wardrobes, doors, and premium window systems.',
-    icon: 'Factory',
-  },
-  {
-    label: 'Fast 3D design before production',
-    icon: 'Box',
-  },
-  {
-    label: 'Precision manufacturing with European machinery',
-    icon: 'Settings2',
-  },
-  {
-    label: 'Solutions designed for UAE villas',
-    icon: 'Home',
-  },
-]
-
-// ============================================================
-// PROBLEMS SECTION
-// ============================================================
 
 export const PROBLEM_ITEMS: ProblemItem[] = [
   { label: 'Quality Problems', icon: 'ShieldX' },
@@ -160,85 +125,76 @@ export const APPROACH_ITEMS: ApproachItem[] = [
   },
 ]
 
-// ============================================================
-// DESIGN PROCESS
-// ============================================================
-
-export const PROCESS_STEPS: ProcessStep[] = [
-  {
-    step: 1,
-    title: 'Upload Floor Plan',
-    description: 'Share your villa layout so our designer understands your space.',
-    icon: 'Box',
-  },
-  {
-    step: 2,
-    title: 'Get 3D Design',
-    description: 'Receive a complete 3D interior concept within an hour.',
-    icon: 'PencilRuler',
-  },
-  {
-    step: 3,
-    title: 'Live Design Edit',
-    description: 'Refine the design in real time with our designers.',
-    icon: 'Pencil',
-  },
+export const DESIGN_STEP_CARDS: StepCard[] = [
+  { key: 'upload', iconName: 'Box' },
+  { key: 'get3d', iconName: 'PencilRuler' },
+  { key: 'liveEdit', iconName: 'Pencil' },
 ]
 
-// ============================================================
-// GALLERY
-// ============================================================
-
-export const GALLERY_IMAGES: GalleryImage[] = [
+export const GALLERY_ITEMS = [
   {
-    src: '/images/home/kitchen-product-image.webp',
-    alt: 'Kitchen',
+    src: '/images/kitchen-1.png',
+    altKey: 'kitchenWithIsland',
     category: 'kitchen',
-    caption: 'Villa Kitchen',
+    className: 'row-span-2 col-span-2',
   },
   {
-    src: '/images/home/wardrobe-product-image.webp',
-    alt: 'Wardrobe',
-    category: 'closet',
-    caption: 'Walk-in Closet',
-  },
-  {
-    src: '/images/home/door-product-image.webp',
-    alt: 'Interior Door',
+    src: '/images/door-2.jpg',
+    altKey: 'woodenDoor',
     category: 'door',
-    caption: 'Interior Door',
+    className: '',
   },
   {
-    src: '/images/home/window-systems-image.webp',
-    alt: 'uPVC Windows',
-    category: 'upvc-window',
-    caption: 'uPVC Window System',
+    src: '/images/kitchen-2.png',
+    altKey: 'modernKitchen',
+    category: 'kitchen',
+    className: '',
   },
-]
-
-// ============================================================
-// FOOTER
-// ============================================================
+  {
+    src: '/images/closet-1.jpg',
+    altKey: 'walkInCloset',
+    category: 'closet',
+    className: 'col-span-2',
+  },
+  {
+    src: '/images/upvc-1.png',
+    altKey: 'upvcWindowsLivingRoom',
+    category: 'upvc',
+    className: 'col-span-2',
+  },
+  {
+    src: '/images/door-1.png',
+    altKey: 'interiorDoor',
+    category: 'door',
+    className: '',
+  },
+  {
+    src: '/images/upvc-2.jpg',
+    altKey: 'upvcWindowsBedroom',
+    category: 'upvc',
+    className: '',
+  },
+] as const
 
 export const FOOTER_SECTIONS: FooterSection[] = [
   {
-    title: 'Quick Links',
+    title: 'quickLinks',
     links: [
-      { label: 'About Us', href: '/about#about-us' },
-      { label: 'Our Team', href: '/about#our-team' },
-      { label: 'Testimonials', href: '/about#testimonials' },
-      { label: 'Projects', href: '/projects' },
-      { label: 'Gallery', href: '/gallery' },
+      { label: 'links.about', href: '/about#about-us' },
+      { label: 'links.team', href: '/about#our-team' },
+      { label: 'links.testimonials', href: '/about#testimonials' },
+      { label: 'links.projects', href: '/projects' },
+      { label: 'links.gallery', href: '/gallery' },
     ],
   },
   {
-    title: 'Explore',
+    title: 'explore',
     links: [
-      { label: 'Walk in Closet', href: '/service/wardrobes/walk-in-closets' },
-      { label: 'Wardrobe Closet', href: '/service/wardrobes' },
-      { label: 'U-Shape Kitchen', href: '/service/kitchens/u-shaped-kitchen' },
-      { label: 'Pantry Kitchen', href: '/service/kitchens/pantry-kitchen' },
-      { label: 'Doors', href: '/service/interior-doors' },
+      { label: 'links.walkInCloset', href: '/service/wardrobes/walk-in-closets' },
+      { label: 'links.wardrobeCloset', href: '/service/wardrobes' },
+      { label: 'links.uShapeKitchen', href: '/service/kitchens/u-shaped-kitchen' },
+      { label: 'links.pantryKitchen', href: '/service/kitchens/pantry-kitchen' },
+      { label: 'links.doors', href: '/service/interior-doors' },
     ],
   },
 ]

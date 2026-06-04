@@ -10,10 +10,9 @@ export default async function WhyChooseSection() {
   const points = [t('points.one'), t('points.two'), t('points.three'), t('points.four')]
 
   return (
-    <section className="bg-white px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-[120px] lg:py-20">
-      <div className="mx-auto max-w-[1196px]">
-        {/* Desktop & Tablet (above md) */}
-        <div className="hidden md:block relative rounded-[10px] min-h-[400px] lg:min-h-[490px]">
+    <section className="bg-white px-4 py-8 sm:px-6 sm:py-12 md:px-8 md:py-16 lg:px-30 lg:py-20">
+      <div className="mx-auto max-w-299">
+        <div className="hidden md:block relative rounded-[10px] min-h-100 lg:min-h-122.5">
           <div
             className="absolute inset-0 rounded-[10px]"
             style={{
@@ -21,13 +20,12 @@ export default async function WhyChooseSection() {
             }}
           />
 
-          <div className="pointer-events-none absolute bottom-0 left-0 rounded-[10px] z-0 w-[40%] md:w-[35%] lg:w-[480px] h-[200px] md:h-[240px] lg:h-[280px] bg-[radial-gradient(ellipse_at_10%_100%,rgba(87,183,192,0.55)_0%,transparent_65%)] blur-md" />
+          <div className="pointer-events-none absolute bottom-0 left-0 rounded-[10px] z-0 w-[40%] md:w-[35%] lg:w-120 h-50 md:h-60 lg:h-70 bg-[radial-gradient(ellipse_at_10%_100%,rgba(87,183,192,0.55)_0%,transparent_65%)] blur-md" />
 
           <div
-            className="relative grid h-full gap-4 md:gap-6 lg:gap-[25px]"
+            className="relative grid h-full gap-4 md:gap-6 lg:gap-6.25"
             style={{ gridTemplateColumns: '1fr 1fr' }}
           >
-            {/* Image Container */}
             <div className="relative flex items-end justify-center overflow-visible pb-0">
               <Image
                 src="/images/why-villa-owners.png"
@@ -47,14 +45,11 @@ export default async function WhyChooseSection() {
               />
             </div>
 
-            {/* Content Container */}
             <div className="relative z-10 flex flex-col justify-center py-6 md:py-10 lg:py-14 pe-4 md:pe-8 lg:pe-12">
-              {/* Heading */}
               <h2 className="text-xl sm:text-2xl md:text-2.5xl lg:text-3xl xl:text-[2.1rem] font-bold leading-tight text-white">
                 {t('title')}
               </h2>
 
-              {/* Points */}
               <ul className="mt-4 md:mt-5 lg:mt-7 space-y-2.5 md:space-y-3 lg:space-y-3.5">
                 {points.map((point, index) => (
                   <li key={index} className="flex items-start gap-2.5 md:gap-3">
@@ -64,12 +59,13 @@ export default async function WhyChooseSection() {
                     >
                       <Check className="h-3 w-3 md:h-3.5 md:w-3.5 text-white" />
                     </span>
-                    <span className="text-sm md:text-base leading-relaxed text-white/95">{point}</span>
+                    <span className="text-sm md:text-base leading-relaxed text-white/95">
+                      {point}
+                    </span>
                   </li>
                 ))}
               </ul>
 
-              {/* CTA */}
               <div className="mt-5 md:mt-6 lg:mt-8">
                 <Link
                   href="/contact"
@@ -83,17 +79,15 @@ export default async function WhyChooseSection() {
           </div>
         </div>
 
-        {/* Mobile (below md) */}
         <div
           className="md:hidden relative rounded-[10px]"
           style={{
             background: 'linear-gradient(to bottom, #57B7C0, #000000)',
           }}
         >
-          {/* Image Container */}
           <div
             className="relative flex justify-center"
-            style={{ height: '200px', sm: '240px', overflow: 'visible' }}
+            style={{ height: '200px', overflow: 'visible' }}
           >
             <div
               className="pointer-events-none absolute inset-x-0 bottom-0"
@@ -108,12 +102,11 @@ export default async function WhyChooseSection() {
               alt="Villa kitchen interior by Ideal Factory"
               width={380}
               height={340}
-              className="relative z-10 h-auto w-full max-w-[280px] sm:max-w-[340px] object-contain drop-shadow-xl"
+              className="relative z-10 h-auto w-full max-w-70 sm:max-w-85 object-contain drop-shadow-xl"
               style={{ marginTop: '-30px' }}
             />
           </div>
 
-          {/* Content Container */}
           <div className="flex flex-col gap-3 sm:gap-4 px-4 sm:px-5 pb-6 sm:pb-8 pt-4 sm:pt-5">
             <h2 className="text-lg sm:text-xl font-bold text-white">{t('title')}</h2>
             <ul className="space-y-2.5 sm:space-y-3">

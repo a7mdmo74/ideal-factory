@@ -180,6 +180,11 @@ export interface ProcessStep {
   icon: string
 }
 
+export interface StepCard {
+  key: 'upload' | 'get3d' | 'liveEdit'
+  iconName: 'Box' | 'PencilRuler' | 'Pencil'
+}
+
 export interface FeatureItem {
   title: string
   description: string

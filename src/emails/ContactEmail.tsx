@@ -1,5 +1,6 @@
 import * as React from 'react'
 import type { ContactFormData } from '@/types'
+import { siteConfig } from '@/config/site'
 
 interface ContactEmailProps {
   data: ContactFormData
@@ -134,7 +135,7 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
                     fontWeight: '600',
                   }}
                 >
-                  Reply to {data.first_name}
+                  Reply to {data.full_name}
                 </a>
               </div>
 
@@ -150,10 +151,10 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
               >
                 This email was sent from the contact form at{' '}
                 <a
-                  href="https://idealhomeuae.com"
+                  href={siteConfig.url}
                   style={{ color: '#999', textDecoration: 'underline' }}
                 >
-                  idealhomeuae.com
+                  {siteConfig.url.replace('https://', '')}
                 </a>
               </p>
             </td>
@@ -164,7 +165,6 @@ export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
   )
 }
 
-// ── Row helper ────────────────────────────────────────────────
 function Row({ label, value, isLink }: { label: string; value: string; isLink?: string }) {
   return (
     <tr>

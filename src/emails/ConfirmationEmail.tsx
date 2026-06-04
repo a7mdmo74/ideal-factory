@@ -1,5 +1,6 @@
 import * as React from 'react'
 import type { ContactFormData } from '@/types'
+import { siteConfig } from '@/config/site'
 
 interface ConfirmationEmailProps {
   data: Pick<ContactFormData, 'full_name' | 'email'>
@@ -22,7 +23,6 @@ export function ConfirmationEmailTemplate({ data }: ConfirmationEmailProps) {
           cellSpacing={0}
           style={{ maxWidth: '600px', margin: '0 auto' }}
         >
-          {/* Header */}
           <tr>
             <td
               style={{
@@ -36,7 +36,6 @@ export function ConfirmationEmailTemplate({ data }: ConfirmationEmailProps) {
             </td>
           </tr>
 
-          {/* Body */}
           <tr>
             <td
               style={{
@@ -46,7 +45,7 @@ export function ConfirmationEmailTemplate({ data }: ConfirmationEmailProps) {
               }}
             >
               <h2 style={{ fontSize: '20px', color: '#111', marginTop: 0 }}>
-                Thank you, {data.first_name}!
+                Thank you, {data.full_name}!
               </h2>
               <p style={{ fontSize: '15px', color: '#444', lineHeight: '1.7' }}>
                 We&apos;ve received your message and a member of our design team will be in touch
@@ -54,16 +53,15 @@ export function ConfirmationEmailTemplate({ data }: ConfirmationEmailProps) {
               </p>
               <p style={{ fontSize: '15px', color: '#444', lineHeight: '1.7' }}>
                 In the meantime, feel free to explore our projects and services at{' '}
-                <a href="https://idealhomeuae.com" style={{ color: '#0E0E0E', fontWeight: '600' }}>
-                  idealhomeuae.com
+                <a href={siteConfig.url} style={{ color: '#0E0E0E', fontWeight: '600' }}>
+                  {siteConfig.url.replace('https://', '')}
                 </a>
                 .
               </p>
 
-              {/* CTA */}
               <div style={{ textAlign: 'center', marginTop: '32px' }}>
                 <a
-                  href="https://idealhomeuae.com/projects"
+                  href={`${siteConfig.url}/projects`}
                   style={{ color: '#0E0E0E', fontWeight: '600' }}
                 >
                   Explore Our Projects
@@ -73,9 +71,9 @@ export function ConfirmationEmailTemplate({ data }: ConfirmationEmailProps) {
               <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '32px 0 24px' }} />
 
               <p style={{ fontSize: '12px', color: '#999', textAlign: 'center', margin: 0 }}>
-                Ideal Factory — ICAD I, Abu Dhabi Industrial City
+                {siteConfig.legalName}
                 <br />
-                +971 50 312 2300 · info@idealhomeuae.com
+                {siteConfig.phone} · {siteConfig.email}
               </p>
             </td>
           </tr>

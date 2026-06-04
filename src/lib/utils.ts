@@ -5,30 +5,25 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-// Format phone number for tel: links
 export function formatPhoneHref(phone: string): string {
   return `tel:${phone.replace(/\s/g, '')}`
 }
 
-// Format email for mailto: links
 export function formatEmailHref(email: string): string {
   return `mailto:${email}`
 }
 
-// Format WhatsApp link
 export function formatWhatsAppHref(phone: string, message?: string): string {
   const cleaned = phone.replace(/[\s+]/g, '')
   const encoded = message ? `?text=${encodeURIComponent(message)}` : ''
   return `https://wa.me/${cleaned}${encoded}`
 }
 
-// Truncate text with ellipsis
 export function truncate(text: string, maxLength: number): string {
   if (text.length <= maxLength) return text
   return `${text.slice(0, maxLength).trimEnd()}...`
 }
 
-// Slugify string to URL-friendly format
 export function slugify(text: string): string {
   return text
     .toLowerCase()
@@ -38,17 +33,14 @@ export function slugify(text: string): string {
     .replace(/^-+|-+$/g, '')
 }
 
-// Capitalize first letter
 export function capitalize(text: string): string {
   return text.charAt(0).toUpperCase() + text.slice(1)
 }
 
-// Check if URL is external
 export function isExternalUrl(url: string): boolean {
   return url.startsWith('http://') || url.startsWith('https://')
 }
 
-// Generate image blur placeholder (for Next.js Image)
 export function shimmer(w: number, h: number): string {
   return `
     <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg">

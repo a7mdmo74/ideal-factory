@@ -26,7 +26,6 @@ export const geistMono = Geist_Mono({
   display: 'swap',
 })
 
-// Combined class string — use in layout.tsx
 export const fontVariables = [
   englishFont.variable,
   arabicFont.variable,

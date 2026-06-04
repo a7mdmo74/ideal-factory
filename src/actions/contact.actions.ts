@@ -10,7 +10,6 @@ import type { ActionResponse, ContactFormData } from '@/types'
 export async function submitContactForm(
   formData: FormData
 ): Promise<ActionResponse<ContactFormData>> {
-  // ── 1. Extract ───────────────────────────────────────────
   const raw = {
     full_name: formData.get('full_name'),
     email: formData.get('email'),
@@ -18,7 +17,6 @@ export async function submitContactForm(
     message: formData.get('message'),
   }
 
-  // ── 2. Validate ──────────────────────────────────────────
   const parsed = contactSchema.safeParse(raw)
 
   if (!parsed.success) {
@@ -31,14 +29,12 @@ export async function submitContactForm(
 
   const { data } = parsed
 
-  // ── 3. Format submission time (Dubai timezone) ───────────
   const submittedAt = new Date().toLocaleString('en-AE', {
     timeZone: 'Asia/Dubai',
     dateStyle: 'full',
     timeStyle: 'short',
   })
 
-  // ── 4. Send email via Resend ─────────────────────────────
   try {
     const { error } = await resend.emails.send({
       from: emailConfig.from,
@@ -56,7 +52,6 @@ export async function submitContactForm(
       }
     }
 
-    // ── 5. Send confirmation email to user ───────────────
     await resend.emails.send({
       from: emailConfig.from,
       to: data.email,

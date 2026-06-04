@@ -19,11 +19,15 @@
   },
   "Navigation": {
     "service": "Our Service",
-    "projects": "Our Projects",
     "about": "About Us",
     "contact": "Contact Us",
     "cta": "Start Your Project",
     "toggleMenu": "Toggle menu",
+    "switchLanguage": "Switch language",
+    "language": {
+      "en": "English",
+      "ar": "العربية"
+    },
     "services": {
       "kitchens": "Kitchens",
       "kitchensDesc": "Custom villa kitchens built for daily use",
@@ -77,6 +81,7 @@
   "Problems": {
     "title": "Why Villa Interior Projects Often Become Difficult?",
     "description": "When interior systems are sourced from multiple suppliers, the process becomes fragmented, making it difficult to coordinate a consistent final result. The lack of commitment leads to:",
+    "videoPlayLabel": "Play customer journey video",
     "items": {
       "quality": "Quality Problems",
       "delays": "Delays during execution",
@@ -118,6 +123,11 @@
       "get3d": "Get 3D Design",
       "liveEdit": "Live Design Edit"
     },
+    "stepBodies": {
+      "upload": "Share your villa layout securely with our designers.",
+      "get3d": "Receive a complete 3D interior concept within an hour.",
+      "liveEdit": "Refine the design in real time with our designers."
+    },
     "cta": "Start Your 3D Interior Design"
   },
   "Gallery": {
@@ -125,6 +135,7 @@
     "title": "Designed. Built. Delivered",
     "cta": "Explore Projects",
     "tags": {
+      "all": "All",
       "kitchen": "Kitchen",
       "door": "Door",
       "closet": "Closet",
@@ -146,6 +157,8 @@
     "title": "What They're Talking About",
     "description": "Real villa owners across the UAE have trusted Ideal Factory for kitchens, closets, doors and uPVC window systems.",
     "customerLabel": "Customer",
+    "previousLabel": "Previous",
+    "nextLabel": "Next",
     "items": {
       "one": {
         "name": "Khalid Al Mansoori",
@@ -166,8 +179,10 @@
     "title": "Let's discuss your project!",
     "description": "Contact us today and learn more about how our interior fit out and custom manufacturing services can bring your ideas to life.",
     "formTitle": "We Love To Hear From You",
+    "formSubtitle": "Tell us about your villa. We'll be in touch within one working day.",
     "fields": {
       "firstName": "First Name",
+      "lastName": "Last Name",
       "phone": "Phone No (optional)",
       "email": "Email",
       "message": "Message",

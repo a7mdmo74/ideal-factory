@@ -45,12 +45,10 @@ export function generateStaticParams() {
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
   const { locale } = await params
 
-  // Validate locale
   if (!hasLocale(routing.locales, locale)) {
     notFound()
   }
 
-  // Load messages for client components directly from files
   const messages = (await import(`../../messages/${locale}.json`)).default
 
   const dir = locale === 'ar' ? 'rtl' : 'ltr'
