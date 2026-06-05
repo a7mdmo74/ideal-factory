@@ -7,7 +7,7 @@
 
 > A modern, bilingual website for Ideal Factory — a premium villa interior design and manufacturing company based in Abu Dhabi, UAE. Specializing in kitchens, wardrobes, interior doors, and premium uPVC window systems.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=flat&logo=vercel)](https://idealhomeuae.com)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-green?style=flat&logo=vercel)]([https://idealhomeuae.com](https://ideal-factory-a7mdmo74.vercel.app/en))
 
 ---
 
