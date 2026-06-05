@@ -12,10 +12,7 @@ export default async function DesignSection() {
 
   return (
     <section className="bg-white px-6 py-20 sm:px-8 lg:px-16 lg:py-28">
-      <div
-        className="relative isolate mx-auto max-w-7xl overflow-hidden"
-        style={{ borderRadius: '2.5rem' }}
-      >
+      <div className="relative isolate mx-auto max-w-7xl overflow-hidden rounded-4xl">
         <Image
           src="/images/desgin-bg.jpg"
           alt=""

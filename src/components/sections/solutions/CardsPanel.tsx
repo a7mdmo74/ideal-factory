@@ -14,7 +14,10 @@ interface CardsPanelProps {
   scrollYProgress: MotionValue<number>
 }
 
-const SERVICE_TRANSLATION_KEYS: Record<ServiceSlug, 'kitchens' | 'wardrobes' | 'doors' | 'windows'> = {
+const SERVICE_TRANSLATION_KEYS: Record<
+  ServiceSlug,
+  'kitchens' | 'wardrobes' | 'doors' | 'windows'
+> = {
   kitchens: 'kitchens',
   wardrobes: 'wardrobes',
   'interior-doors': 'doors',
@@ -64,13 +67,13 @@ export function CardsPanel({ scrollYProgress }: CardsPanelProps) {
         }}
       >
         <div
-          className="relative mx-auto w-full max-w-[1440px] pb-8 pt-14"
+          className="relative mx-auto w-full max-w-360 pb-8 pt-14"
           style={{
             paddingLeft: 'clamp(1.25rem, 3.2vw, 2.875rem)',
             paddingRight: 'clamp(1.25rem, 3.2vw, 2.875rem)',
           }}
         >
-          <div className="mx-auto mb-8 max-w-[1114px] text-center">
+          <div className="mx-auto mb-8 max-w-278.5 text-center">
             <motion.div
               className="mb-5 flex justify-center"
               initial={{ opacity: 0, y: -8 }}
@@ -158,7 +161,7 @@ export function CardsPanel({ scrollYProgress }: CardsPanelProps) {
           >
             <Link
               href="/projects"
-              className="inline-flex items-center gap-2 rounded-[8px] bg-primary px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-primary-hover hover:shadow-[0_0_24px_rgb(var(--primary)_/_0.35)]"
+              className="inline-flex items-center gap-2 rounded-[8px] bg-primary px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-primary-hover hover:shadow-[0_0_24px_rgb(var(--primary)/0.35)]"
               style={{
                 fontFamily: '"Inter", sans-serif',
                 minWidth: 236,
@@ -166,7 +169,7 @@ export function CardsPanel({ scrollYProgress }: CardsPanelProps) {
               }}
             >
               {t('cta')}
-              <ArrowRight className="h-[18px] w-[18px]" aria-hidden="true" />
+              <ArrowRight className="h-4.5 w-4.5" aria-hidden="true" />
             </Link>
           </motion.div>
         </div>

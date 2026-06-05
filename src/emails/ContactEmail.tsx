@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Tailwind } from '@react-email/components'
 import type { ContactFormData } from '@/types'
 import { siteConfig } from '@/config/site'
 
@@ -9,189 +10,91 @@ interface ContactEmailProps {
 
 export function ContactEmailTemplate({ data, submittedAt }: ContactEmailProps) {
   return (
-    <html>
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body
-        style={{
-          fontFamily: 'Arial, sans-serif',
-          backgroundColor: '#f4f4f4',
-          margin: 0,
-          padding: '20px',
-        }}
-      >
-        <table
-          width="100%"
-          cellPadding={0}
-          cellSpacing={0}
-          style={{ maxWidth: '600px', margin: '0 auto' }}
-        >
-          <tr>
-            <td
-              style={{
-                backgroundColor: '#0E0E0E',
-                padding: '32px 40px',
-                borderRadius: '12px 12px 0 0',
-                textAlign: 'center',
-              }}
-            >
-              <h1
-                style={{
-                  color: '#ffffff',
-                  fontSize: '24px',
-                  fontWeight: '700',
-                  margin: 0,
-                }}
-              >
-                Ideal Factory
-              </h1>
-              <p
-                style={{
-                  color: 'rgba(255,255,255,0.6)',
-                  fontSize: '13px',
-                  margin: '6px 0 0',
-                }}
-              >
-                New Contact Form Submission
-              </p>
-            </td>
-          </tr>
+    <Tailwind>
+      <html>
+        <head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+        </head>
 
-          <tr>
-            <td
-              style={{
-                backgroundColor: '#ffffff',
-                padding: '40px',
-                borderRadius: '0 0 12px 12px',
-              }}
-            >
-              <p
-                style={{
-                  fontSize: '16px',
-                  color: '#111',
-                  marginTop: 0,
-                }}
-              >
-                You have a new inquiry from <strong>{data.full_name}</strong>.
-              </p>
+        <body className="m-0 bg-gray-100 p-5 font-sans">
+          <table width="100%" cellPadding={0} cellSpacing={0} className="mx-auto max-w-[600px]">
+            <tr>
+              <td className="rounded-t-xl bg-[#0E0E0E] px-10 py-8 text-center">
+                <h1 className="m-0 text-2xl font-bold text-white">Ideal Factory</h1>
 
-              <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '24px 0' }} />
+                <p className="mt-1.5 mb-0 text-[13px] text-white/60">New Contact Form Submission</p>
+              </td>
+            </tr>
 
-              <table width="100%" cellPadding={0} cellSpacing={0}>
-                <tbody>
-                  <Row label="Full Name" value={`${data.full_name}`} />
-                  <Row label="Email" value={data.email} isLink={`mailto:${data.email}`} />
-                  <Row
-                    label="Phone"
-                    value={data.phone || 'Not provided'}
-                    isLink={data.phone ? `tel:${data.phone}` : undefined}
-                  />
-                  <Row label="Submitted" value={submittedAt} />
-                </tbody>
-              </table>
+            <tr>
+              <td className="rounded-b-xl bg-white p-10">
+                <p className="mt-0 text-base text-[#111]">
+                  You have a new inquiry from <strong>{data.full_name}</strong>.
+                </p>
 
-              <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '24px 0' }} />
+                <hr className="my-6 border-0 border-t border-[#eeeeee]" />
 
-              <p
-                style={{
-                  fontSize: '13px',
-                  fontWeight: '600',
-                  color: '#666',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.08em',
-                  margin: '0 0 10px',
-                }}
-              >
-                Message
-              </p>
-              <p
-                style={{
-                  fontSize: '15px',
-                  color: '#111',
-                  lineHeight: '1.7',
-                  backgroundColor: '#f9f9f9',
-                  padding: '16px 20px',
-                  borderRadius: '8px',
-                  borderLeft: '4px solid #0E0E0E',
-                  margin: 0,
-                }}
-              >
-                {data.message}
-              </p>
+                <table width="100%" cellPadding={0} cellSpacing={0}>
+                  <tbody>
+                    <Row label="Full Name" value={data.full_name} />
 
-              <div style={{ textAlign: 'center', marginTop: '32px' }}>
-                <a
-                  href={`mailto:${data.email}`}
-                  style={{
-                    display: 'inline-block',
-                    backgroundColor: '#0E0E0E',
-                    color: '#ffffff',
-                    padding: '12px 28px',
-                    borderRadius: '8px',
-                    textDecoration: 'none',
-                    fontSize: '14px',
-                    fontWeight: '600',
-                  }}
-                >
-                  Reply to {data.full_name}
-                </a>
-              </div>
+                    <Row label="Email" value={data.email} isLink={`mailto:${data.email}`} />
 
-              <hr style={{ border: 'none', borderTop: '1px solid #eee', margin: '32px 0 24px' }} />
+                    <Row
+                      label="Phone"
+                      value={data.phone || 'Not provided'}
+                      isLink={data.phone ? `tel:${data.phone}` : undefined}
+                    />
 
-              <p
-                style={{
-                  fontSize: '12px',
-                  color: '#999',
-                  textAlign: 'center',
-                  margin: 0,
-                }}
-              >
-                This email was sent from the contact form at{' '}
-                <a
-                  href={siteConfig.url}
-                  style={{ color: '#999', textDecoration: 'underline' }}
-                >
-                  {siteConfig.url.replace('https://', '')}
-                </a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </body>
-    </html>
+                    <Row label="Submitted" value={submittedAt} />
+                  </tbody>
+                </table>
+
+                <hr className="my-6 border-0 border-t border-[#eeeeee]" />
+
+                <p className="mb-2.5 text-[13px] font-semibold uppercase tracking-wider text-[#666]">
+                  Message
+                </p>
+
+                <p className="m-0 rounded-lg border-l-4 border-[#0E0E0E] bg-[#f9f9f9] px-5 py-4 text-[15px] leading-7 text-[#111]">
+                  {data.message}
+                </p>
+
+                <div className="mt-8 text-center">
+                  <a
+                    href={`mailto:${data.email}`}
+                    className="inline-block rounded-lg bg-[#0E0E0E] px-7 py-3 text-sm font-semibold text-white no-underline"
+                  >
+                    Reply to {data.full_name}
+                  </a>
+                </div>
+
+                <hr className="my-8 border-0 border-t border-[#eeeeee]" />
+
+                <p className="m-0 text-center text-xs text-[#999]">
+                  This email was sent from the contact form at{' '}
+                  <a href={siteConfig.url} className="text-[#999] underline">
+                    {siteConfig.url.replace('https://', '')}
+                  </a>
+                </p>
+              </td>
+            </tr>
+          </table>
+        </body>
+      </html>
+    </Tailwind>
   )
 }
 
 function Row({ label, value, isLink }: { label: string; value: string; isLink?: string }) {
   return (
     <tr>
-      <td
-        style={{
-          padding: '8px 0',
-          fontSize: '13px',
-          fontWeight: '600',
-          color: '#666',
-          width: '120px',
-          verticalAlign: 'top',
-          textTransform: 'uppercase',
-          letterSpacing: '0.06em',
-        }}
-      >
-        {label}
-      </td>
-      <td
-        style={{
-          padding: '8px 0',
-          fontSize: '14px',
-          color: '#111',
-          verticalAlign: 'top',
-        }}
-      >
+      <td className="py-2 text-sm font-medium uppercase tracking-wide text-[#666]">{label}</td>
+
+      <td className="px-0 py-2 text-sm text-[#111]">
         {isLink ? (
-          <a href={isLink} style={{ color: '#0E0E0E', textDecoration: 'underline' }}>
+          <a href={isLink} className="text-[#0E0E0E] underline">
             {value}
           </a>
         ) : (

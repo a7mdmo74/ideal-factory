@@ -9,17 +9,11 @@ import {
   PencilRuler,
   Wrench,
   Factory,
+  ArrowRightCircle,
 } from 'lucide-react'
 import { getBlurDataURL } from '@/lib/utils'
 import VideoPlayer from '@/components/custom/VideoPlayer'
 import { PROBLEM_ITEMS, APPROACH_ITEMS } from '@/lib/constants'
-
-const PROBLEM_ICON_MAP = {
-  ShieldX,
-  Clock,
-  Wallet,
-  CircleAlert,
-} as const
 
 const APPROACH_ICON_MAP = {
   Layers,
@@ -35,23 +29,22 @@ export default async function ProblemsSection() {
     <section className="bg-white px-6 py-20 sm:px-8 lg:px-16 lg:py-28">
       <div className="mx-auto max-w-6xl rounded-4xl bg-[#231f20] px-6 py-8 text-white shadow-[0_24px_80px_rgba(0,0,0,0.12)] sm:px-8 sm:py-10 lg:px-10 lg:py-12">
         <div className="max-w-4xl">
-          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[2.6rem]">
+          <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-[2.5rem]">
             {t('title')}
           </h2>
-          <p className="mt-4 max-w-4xl text-sm leading-7 text-white/80 sm:text-base">
+          <p className="mt-4 max-w-4xl text-sm leading-7 text-white/80 sm:text-lg">
             {t('description')}
           </p>
         </div>
 
         <div className="mt-8 grid gap-x-10 gap-y-4 sm:grid-cols-2">
           {PROBLEM_ITEMS.map((item, index) => {
-            const IconComponent = PROBLEM_ICON_MAP[item.icon as keyof typeof PROBLEM_ICON_MAP]
             const key = ['quality', 'delays', 'value', 'afterSales'][index]
             return (
               <div key={key}>
-                <div className="flex items-center gap-3 text-lg font-semibold text-white">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/45 text-white/80">
-                    <IconComponent className="h-3.5 w-3.5" aria-hidden="true" />
+                <div className="flex items-center gap-3 text-2xl font-semibold text-white">
+                  <span className="flex h-6 w-6 shrink-0 items-center justify-center text-white/80">
+                    <ArrowRightCircle className="size-8" aria-hidden="true" />
                   </span>
                   <p>{t(`items.${key}`)}</p>
                 </div>
@@ -80,7 +73,7 @@ export default async function ProblemsSection() {
 
         <div className="mt-10 grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-0">
           <div className="lg:pe-10">
-            <h2 className="text-3xl font-bold leading-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold leading-tight text-white sm:text-3xl">
               {t('approach.title1')}
               <br />
               {t('approach.title2')}
@@ -93,7 +86,7 @@ export default async function ProblemsSection() {
               const key = ['multipleSystems', 'coordinatedDesign', 'afterSales', 'precision'][index]
               return (
                 <div key={key}>
-                  <article className="h-full border-white/10 py-6 sm:px-6 sm:[&:nth-child(odd)]:border-e sm:[&:nth-child(n+3)]:border-t">
+                  <article className="h-full border-white/10 py-6 sm:px-6 sm:odd:border-e sm:nth-[n+3]:border-t">
                     <span className="mb-4 inline-flex h-10 w-10 items-center justify-center text-primary">
                       <IconComponent className="h-5 w-5" aria-hidden="true" />
                     </span>

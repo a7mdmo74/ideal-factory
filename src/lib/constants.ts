@@ -12,12 +12,6 @@ export const NAV_ITEMS: NavItem[] = [
   {
     label: 'service',
     href: '/service',
-    dropdown: [
-      { label: 'services.kitchens', href: '/service/kitchens', description: 'services.kitchensDesc' },
-      { label: 'services.wardrobes', href: '/service/wardrobes', description: 'services.wardrobesDesc' },
-      { label: 'services.doors', href: '/service/interior-doors', description: 'services.doorsDesc' },
-      { label: 'services.windows', href: '/service/upvc-window-door-systems', description: 'services.windowsDesc' },
-    ],
   },
   { label: 'about', href: '/about' },
   { label: 'contact', href: '/contact' },
@@ -30,7 +24,7 @@ export const SERVICES: Service[] = [
     slug: 'kitchens',
     href: '/service/kitchens',
     icon: 'ChefHat',
-    image: 'https://i.pravatar.cc/600?img=1',
+    image: '/images/kitchens.png',
     description:
       'Modern kitchens engineered for durability, functionality, and refined everyday use.',
   },
@@ -40,7 +34,7 @@ export const SERVICES: Service[] = [
     slug: 'wardrobes',
     href: '/service/wardrobes',
     icon: 'Shirt',
-    image: 'https://i.pravatar.cc/600?img=2',
+    image: '/images/wardrobes.png',
     description:
       'Walk-in and built-in wardrobe systems designed to organise storage while enhancing interior elegance.',
   },
@@ -50,7 +44,7 @@ export const SERVICES: Service[] = [
     slug: 'interior-doors',
     href: '/service/interior-doors',
     icon: 'DoorOpen',
-    image: 'https://i.pravatar.cc/600?img=3',
+    image: '/images/wooden.png',
     description: 'Precision-crafted doors built for durability, security, and premium finishes.',
   },
   {
@@ -59,7 +53,7 @@ export const SERVICES: Service[] = [
     slug: 'upvc-window-door-systems',
     href: '/service/upvc-window-door-systems',
     icon: 'Maximize',
-    image: 'https://i.pravatar.cc/600?img=4',
+    image: '/images/premium.jpg',
     description:
       'High-performance uPVC windows engineered for thermal insulation and long-term performance in UAE weather.',
   },

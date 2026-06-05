@@ -139,6 +139,16 @@
     "badge": "Our Work",
     "title": "Designed. Built. Delivered",
     "cta": "Explore Projects",
+    "items": {
+      "kitchenWithIsland": "Kitchen with Island",
+      "woodenDoor": "Wooden Interior Door",
+      "modernKitchen": "Modern Kitchen",
+      "walkInCloset": "Walk-in Closet",
+      "upvcWindowsLivingRoom": "uPVC Windows in Living Room",
+      "upvcWindowsBedroom": "uPVC Windows in Bedroom",
+      "wardrobeCloset": "Wardrobe Closet",
+      "interiorDoor": "Interior Door"
+    },
     "tags": {
       "all": "All",
       "kitchen": "Kitchen",
@@ -159,6 +169,7 @@
   },
   "Testimonials": {
     "badge": "Testimonials",
+    "avatarAlt": "Customer photo",
     "title": "What They're Talking About",
     "description": "Real villa owners across the UAE have trusted Ideal Factory for kitchens, closets, doors and uPVC window systems.",
     "customerLabel": "Customer",

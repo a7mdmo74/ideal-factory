@@ -100,8 +100,7 @@ function FilteredLayout({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.3, ease: 'easeInOut' }}
-            className="relative overflow-hidden rounded-2xl"
-            style={{ height: '224px' }}
+            className="relative overflow-hidden rounded-2xl h-56"
           >
             <Image
               src={item.src}

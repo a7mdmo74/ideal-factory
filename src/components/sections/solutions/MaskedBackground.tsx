@@ -7,24 +7,33 @@ interface MaskedBackgroundProps {
   scrollYProgress: MotionValue<number>
 }
 
+const TEXT_CENTER = '720px 450px'
+
 export function MaskedBackground({ scrollYProgress }: MaskedBackgroundProps) {
   const t = useTranslations('Solutions')
+
   const words = [t('maskWords.our'), t('maskWords.interior'), t('maskWords.solutions')]
+
   const maskGroupOpacity = useTransform(scrollYProgress, [0, 0.15, 0.35, 0.45], [0, 1, 1, 0])
+
   const maskGroupScale = useTransform(scrollYProgress, [0, 0.45], [0.65, 2.0])
 
   const outlineGroupOpacity = useTransform(scrollYProgress, [0, 0.15, 0.35, 0.45], [1, 1, 1, 0])
+
   const outlineGroupScale = useTransform(scrollYProgress, [0, 0.45], [0.65, 2.0])
 
   const villaOpacity = useTransform(scrollYProgress, [0, 0.25, 0.35, 0.58, 0.65], [0, 0, 1, 1, 0])
+
   const villaWidth = useTransform(scrollYProgress, [0.35, 0.55], ['100vw', '80vw'])
+
   const villaHeight = useTransform(scrollYProgress, [0.35, 0.55], ['100vh', '80vh'])
+
   const villaBorderRadius = useTransform(scrollYProgress, [0.35, 0.55], ['0px', '40vh'])
 
   return (
     <>
       <motion.div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 overflow-hidden z-10"
+        className="absolute left-1/2 top-1/2 z-10 -translate-x-1/2 -translate-y-1/2 overflow-hidden"
         style={{
           width: villaWidth,
           height: villaHeight,
@@ -33,13 +42,9 @@ export function MaskedBackground({ scrollYProgress }: MaskedBackgroundProps) {
         }}
       >
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          className="absolute left-1/2 top-1/2 h-screen w-screen -translate-x-1/2 -translate-y-1/2 bg-cover bg-center"
           style={{
             backgroundImage: 'url(/images/parallax-effect-background-image.jpg)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center',
-            width: '100vw',
-            height: '100vh',
           }}
         />
       </motion.div>
@@ -66,14 +71,14 @@ export function MaskedBackground({ scrollYProgress }: MaskedBackgroundProps) {
               style={{
                 opacity: maskGroupOpacity,
                 scale: maskGroupScale,
-                transformOrigin: '719.9999952072653px 449.99999540696257px',
+                transformOrigin: TEXT_CENTER,
               }}
             >
-              {words.map((word, i) => (
+              {words.map((word, index) => (
                 <text
                   key={word}
                   x="720"
-                  y={270 + i * 180}
+                  y={270 + index * 180}
                   fill="white"
                   fontFamily='"Bebas Neue", Impact, sans-serif'
                   fontSize="190"
@@ -87,6 +92,7 @@ export function MaskedBackground({ scrollYProgress }: MaskedBackgroundProps) {
             </motion.g>
           </mask>
         </defs>
+
         <image
           href="/images/parallax-effect-background-image.jpg"
           x="0"
@@ -108,14 +114,14 @@ export function MaskedBackground({ scrollYProgress }: MaskedBackgroundProps) {
           style={{
             opacity: outlineGroupOpacity,
             scale: outlineGroupScale,
-            transformOrigin: '719.9999952072653px 449.99999540696257px',
+            transformOrigin: TEXT_CENTER,
           }}
         >
-          {words.map((word, i) => (
+          {words.map((word, index) => (
             <text
               key={word}
               x="720"
-              y={270 + i * 180}
+              y={270 + index * 180}
               fill="transparent"
               stroke="rgba(255,255,255,0.92)"
               strokeWidth="3"

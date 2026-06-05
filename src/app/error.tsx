@@ -8,7 +8,7 @@ export default function Error({ error, reset }: { error: Error; reset: () => voi
   }, [error])
 
   return (
-    <div style={{ padding: 24 }}>
+    <div className="p-6">
       <h1>Something went wrong.</h1>
       <p>{error.message}</p>
       <button onClick={() => reset()}>Retry</button>
